@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my interactive web page</title>
+</head>
+<body>
+
+    <style>
+        body{
+            background-color: chartreuse;
+        }
+        #header{
+            padding: 10px;
+            align-items: center;
+            text-align: center;
+            color: chocolate;
+            background-color: black;
+            border-radius: 10px 15px;
+            height:auto;
+            width: auto;
+        }
+        .newcontent{
+            margin: 2x solid red;
+            padding: 10px;
+            background-color: aqua;
+            height: 90px;
+            width: 90%;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        #changeColorButton{
+            color: yellow;
+            cursor: pointer;
+            background-color: brown;
+            padding: 10px;
+            align-items: center;
+            border-radius: 5px;
+
+        }
+        #changeColorButton:hover{
+            color: orangered;
+        }
+        #next a {
+            text-align: right;
+        }
+        footer{
+            text-align: right;
+        }
+
+    </style>
+    <div id="header">
+        <h1>WEB DEVELOPMENT</h1>
+    </div>
+   
+    <div class="newcontent">
+        <p>this is a simple example of extractive web page</p>
+        <p>i have used a very simple website to show.i have used html,css and js</p>
+    </div>
+<br>
+<br>
+    <div>
+        <button id="changeColorButton">Change background color</button>
+    </div>
+
+    <div id="next">
+        <a href="next">next page</a>
+
+    </div>
+
+    <footer><p><small>&copy;2023 my website</small></p></footer>
+
+    <script>
+        document.getElementById("changeColorButton").addEventListener("click",function() {
+
+            const randomColor ='#' +math.floor(Math.random()*16777215).toString(16);
+
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+    
+</body>
+</html>
